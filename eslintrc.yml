@@ -1,0 +1,76 @@
+env:
+  es2021: true
+  node: true
+
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:react-hooks/recommended"
+  - "@react-native-community"
+  - "prettier"
+
+parser: "@typescript-eslint/parser"
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+
+plugins:
+  - react
+  - "@typescript-eslint"
+
+settings: { react: { version: "detect" } }
+
+ignorePatterns:
+  - "metro.config.js"
+
+rules:
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+  no-var:
+    - error
+  no-console:
+    - error
+    - allow:
+        - warn
+        - error
+        - info
+  arrow-parens:
+    - error
+    - always
+  curly:
+    - error
+    - multi-line
+  "@typescript-eslint/quotes":
+    - error
+    - double
+  "@typescript-eslint/semi":
+    - error
+    - always
+  "@typescript-eslint/no-unused-vars":
+    - error
+    - vars: all
+      args: after-used
+      argsIgnorePattern: ^_
+      caughtErrors: all
+  "@typescript-eslint/no-empty-interface":
+    - error
+    - allowSingleExtends: true
+  "@typescript-eslint/explicit-module-boundary-types":
+    - off
+  "@typescript-eslint/explicit-member-accessibility":
+    - error
+    - accessibility: no-public
+  jsx-quotes:
+    - error
+    - prefer-double
+  react/prop-types:
+    - off
+  react/react-in-jsx-scope:
+    - off
+  react/display-name:
+    - off
