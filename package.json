@@ -1,0 +1,57 @@
+{
+  "name": "weight-calculator",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:fs": "ls-lint",
+    "lint:js": "npx eslint \"src/**/*.{js,jsx,ts,tsx}\" --resolve-plugins-relative-to .",
+    "lint": "npm run lint:editorconfig && npm run lint:fs && npm run lint:js"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.66.1",
+    "react-native-svg": "^12.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@ls-lint/ls-lint": "^1.10.0",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/react-native": "^0.65.0",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "jest": "^26.6.3",
+    "metro-config": "^0.66.2",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-test-renderer": "17.0.2",
+    "stylelint": "^14.0.0",
+    "stylelint-react-native": "^2.3.0",
+    "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
