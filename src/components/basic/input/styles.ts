@@ -1,10 +1,9 @@
 import { StyleSheet, TextStyle, ViewStyle } from "react-native";
 
 import { Color, Font } from "common/enums";
-import { INPUT_WRAPPER_COLOR, INPUT_ACTIVE_COLOR, INPUT_COLOR } from "./config";
+import { INPUT_ACTIVE_COLOR, INPUT_COLOR } from "./config";
 
 type Styles = {
-  container: ViewStyle;
   label: TextStyle;
   inputWrapper: TextStyle;
   input: ViewStyle;
@@ -13,12 +12,6 @@ type Styles = {
 
 export default (isFocused: boolean) =>
   StyleSheet.create<Styles>({
-    container: {
-      backgroundColor: INPUT_WRAPPER_COLOR,
-      borderRadius: 10,
-      paddingHorizontal: 15,
-      paddingVertical: 10,
-    },
     label: {
       fontSize: 12,
       color: Color.TEXT_DEFAULT,

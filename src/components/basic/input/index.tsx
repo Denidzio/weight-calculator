@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { SvgProps } from "react-native-svg";
 
-import { Text } from "components/basic";
+import { Text, Wrapper } from "components/basic";
 import { INPUT_ACTIVE_COLOR, INPUT_COLOR } from "./config";
 import getStyles from "./styles";
 
@@ -52,7 +52,7 @@ export const Input = ({
   }, []);
 
   return (
-    <View style={[styles.container, style]}>
+    <Wrapper style={style}>
       <Text style={styles.label}>{label}</Text>
       <View style={styles.inputWrapper}>
         <TextInput
@@ -67,6 +67,6 @@ export const Input = ({
           {React.createElement(icon, { fill: iconColor })}
         </View>
       </View>
-    </View>
+    </Wrapper>
   );
 };
