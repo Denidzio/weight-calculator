@@ -1,11 +1,9 @@
-import { ViewStyle } from "react-native";
-
-export type CheckboxType = "primary" | "secondary";
+import { StyleProp, ViewStyle } from "react-native";
 
 export type BaseCheckboxProps = {
   label?: string;
   checked?: boolean;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
 };
 
 export type TypedCheckboxProps = BaseCheckboxProps & {

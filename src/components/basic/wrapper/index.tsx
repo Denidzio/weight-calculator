@@ -5,7 +5,7 @@ import styles from "./styles";
 
 type Props = {
   children: React.ReactNode;
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 };
 
 export const Wrapper = ({ children, style }: Props) => {
