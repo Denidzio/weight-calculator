@@ -6,7 +6,6 @@ type Styles = {
   container: ViewStyle;
   content: ViewStyle;
   label: TextStyle;
-  dash: ViewStyle;
 };
 
 export default (checked: boolean) =>
@@ -27,11 +26,5 @@ export default (checked: boolean) =>
       fontSize: 16,
       marginRight: 25,
       paddingVertical: 5,
-    },
-    dash: {
-      alignSelf: "center",
-      position: "absolute",
-      bottom: -1,
-      opacity: checked ? 0 : 1,
     },
   });

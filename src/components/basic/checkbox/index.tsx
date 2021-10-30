@@ -1,13 +1,14 @@
 import * as React from "react";
 
-import { BaseCheckboxProps, CheckboxType, TypedCheckboxProps } from "./models";
+import { CheckboxType } from "common/types";
+import { BaseCheckboxProps, TypedCheckboxProps } from "./models";
 import PrimaryCheckbox from "./components/primary";
 import SecondaryCheckbox from "./components/secondary";
 
 type Props = BaseCheckboxProps & {
   type?: CheckboxType;
   disabled?: boolean;
-  onChange?: (checked: boolean) => void;
+  onChange?: () => void;
 };
 
 export const Checkbox = ({
@@ -18,27 +19,20 @@ export const Checkbox = ({
   style,
   onChange,
 }: Props) => {
-  const [value, setValue] = React.useState(checked);
-
   const handleToggle = React.useCallback(() => {
     if (disabled) {
       return;
     }
 
-    setValue(!value);
-    onChange?.(!value);
-  }, [disabled, value, onChange]);
+    onChange?.();
+  }, [disabled, onChange]);
 
   const checkboxProps: TypedCheckboxProps = {
     style,
     label,
-    checked: value,
+    checked,
     onToggle: handleToggle,
   };
-
-  React.useEffect(() => {
-    setValue(checked);
-  }, [checked]);
 
   switch (type) {
     case "primary":
